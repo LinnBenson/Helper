@@ -1,0 +1,26 @@
+{
+    "name": "linnbenson/helper",
+    "description": "PHP development auxiliary functions.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Linn Benson",
+            "email": "support@bemiun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TCore\\": "src/"
+        },
+        "files": [
+            "src/Helper/Common.php"
+        ]
+    },
+    "bin": [
+        "bin/start"
+    ],
+    "require": {
+        "php": ">=7.3"
+    }
+}
