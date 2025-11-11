@@ -204,3 +204,25 @@
             return ( method_exists( $object, $method ) && !(new \ReflectionMethod( $object, $method ))->isPrivate() );
         }
     }
+    /**
+     * 判断内容是否以指定内容开始
+     * - [string]:内容, [string]:开始的参数
+     * return [boolean]:判断结果
+     */
+    if ( !function_exists( 'startsWith' ) ) {
+        function startWith( string $string, string $prefix ) {
+            if ( !is_string( $string ) || !is_string( $prefix ) ) { return false; }
+            return substr( $string, 0, strlen( $prefix ) ) === $prefix;
+        }
+    }
+    /**
+     * 判断内容是否以指定内容结束
+     * - [string]:内容, [string]:结束的参数
+     * return [boolean]:判断结果
+     */
+    if ( !function_exists( 'endsWith' ) ) {
+        function endWith( string $string, string $prefix ) {
+            if ( !is_string( $string ) || !is_string( $prefix ) ) { return false; }
+            return substr( $string, -strlen( $prefix ) ) === $prefix;
+        }
+    }
