@@ -14,7 +14,7 @@
             "TCore\\": "src/"
         },
         "files": [
-            "src/Helper/Common.php"
+            "src/common/function.php"
         ]
     },
     "bin": [
